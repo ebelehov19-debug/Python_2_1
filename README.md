@@ -38,15 +38,15 @@
 ## Инструкции по запуску
 
 1. **Клонирование репозитория**
-```git clone https://github.com/ebelehov19-debug/Python_2_1```
-2. 
+```git clone <repository-url>```
+2. **Создание вертуального окружения**
 ```python -m venv .venv```
 ```source .venv/bin/activate```
-3. 
+3. **Установка зависимостей**
 ```pip install typer```
-4. 
+4. **Просмотр команд**
 ```python -m src --help```
-5. 
+5. **Просмотр плагинов**
 ```python -m src plugins```
 
 ## Примеры использования программы

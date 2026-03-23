@@ -1,3 +1,4 @@
+"""Интерфейс командной строки для обработчика задач.""" 
 from pathlib import Path
 from typing import Any
 
@@ -12,12 +13,14 @@ cli = Typer(no_args_is_help=True)
 
 @cli.command("plugins")
 def plugins_list() -> None:
+    """Показать список доступных плагинов источников задач."""
     typer.echo("Available plugins:")
     for name in sorted(REGISTRY):
         typer.echo(name)
 
 
 def _build_sources(stdin: bool, jsonl: list[Path]) -> list[Any]:
+    """Создать экземпляры источников на основе аргументов командной строки."""
     sources: list[Any] = []
     if stdin:
         sources.append(REGISTRY["stdin"]())
@@ -37,7 +40,8 @@ def read(
         readable=True,
     ),
     contains: str | None = typer.Option(None, "--contains", help="Substring filter"),
-):
+)->None:
+    """Обработать задачи из указанных источников."""
     raw_sources = _build_sources(stdin, jsonl)
     inbox = TaskProcessor(raw_sources)
     numbers = 0

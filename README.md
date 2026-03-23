@@ -38,7 +38,7 @@
 ## Инструкции по запуску
 
 1. **Клонирование репозитория**
-```git clone <repository-url>```
+```git clone https://github.com/ebelehov19-debug/Python_2_1```
 2. **Создание вертуального окружения**
 ```python -m venv .venv```
 ```source .venv/bin/activate```

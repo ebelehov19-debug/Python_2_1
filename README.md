@@ -51,7 +51,7 @@
 
 ## Примеры использования программы
 1. **Чтение из JSONL(JOSN) файла**
-```python -m src resd --jsonl source/tasks.jsonl```
+```python -m src read --jsonl source/tasks.jsonl```
 2. **Чтение из stdin**
 ```echo "1: Buy milk" | python -m src read --stdin```
 - Многострочный ввод в stdin  
